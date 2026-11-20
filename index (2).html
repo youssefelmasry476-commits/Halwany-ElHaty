@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="حاتي الحلوني: مطعم حلال، مشويات وأكل لحد آخر الليل. احجز طاولتك أو اطلب على 01010958189.">
+<title>حاتي الحلوني</title>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700;800&family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --coal:#170E0A; --coal2:#241510; --ember:#E5521B; --fire:#F58A1F; --saffron:#F4B63D;
+  --cream:#FBEFD9; --muted:#CDB89A; --line:#4A2E20;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--coal);color:var(--cream);font-family:"Tajawal","Segoe UI",Tahoma,sans-serif;font-size:18px;line-height:1.8;overflow-x:hidden}
+h1,h2,h3{font-family:"Reem Kufi","Tajawal",Tahoma,sans-serif;margin:0;line-height:1.2}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;padding:16px 0;position:relative;z-index:3}
+.brand{font-family:"Reem Kufi",Tahoma,sans-serif;font-weight:700;font-size:1.4rem;color:var(--saffron)}
+.top nav a{text-decoration:none;margin-inline-start:22px;font-weight:500;color:var(--muted)}
+.top nav a:hover{color:var(--saffron)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(ellipse 70% 60% at 50% 105%,rgba(229,82,27,.55),transparent 70%),
+  radial-gradient(ellipse 40% 40% at 78% 40%,rgba(244,182,61,.16),transparent 70%),var(--coal)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;padding-top:30px;padding-bottom:150px;position:relative;z-index:2}
+.hero h1{font-size:clamp(3.6rem,11vw,7.5rem);font-weight:700;line-height:1.02;
+  background:linear-gradient(180deg,var(--saffron),var(--fire) 60%,var(--ember));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .tag{font-family:"Reem Kufi",Tahoma,sans-serif;font-size:1.5rem;margin:14px 0 8px}
+.hero p{color:var(--muted);max-width:30em;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 30px;border-radius:999px;text-decoration:none;font-weight:800;border:2px solid var(--saffron);transition:transform .2s}
+.btn.main{background:linear-gradient(180deg,var(--fire),var(--ember));border-color:transparent;color:#fff;box-shadow:0 8px 26px rgba(229,82,27,.45)}
+.btn:hover{transform:translateY(-3px)}
+.plate{width:100%;max-width:440px;justify-self:center;filter:drop-shadow(0 20px 40px rgba(0,0,0,.6))}
+.steam path{animation:steam 4s ease-in-out infinite;transform-box:fill-box;opacity:.5}
+.steam path:nth-child(2){animation-delay:1.3s}.steam path:nth-child(3){animation-delay:2.4s}
+@keyframes steam{0%,100%{transform:translateY(0);opacity:.15}50%{transform:translateY(-14px);opacity:.55}}
+.flames{position:absolute;inset:auto 0 0 0;height:150px;z-index:1;width:100%}
+.flames path{transform-box:fill-box;transform-origin:50% 100%;animation:flick 1.6s ease-in-out infinite}
+.flames path:nth-child(2n){animation-duration:1.2s;animation-delay:-.4s}
+.flames path:nth-child(3n){animation-duration:2s;animation-delay:-.9s}
+@keyframes flick{0%,100%{transform:scaleY(1) skewX(0)}50%{transform:scaleY(1.18) skewX(3deg)}}
+
+/* ribbon */
+.ribbon{background:var(--saffron);color:var(--coal);font-family:"Reem Kufi",Tahoma,sans-serif;font-weight:700;font-size:1.15rem;padding:12px 0;overflow:hidden;white-space:nowrap}
+.ribbon div{display:flex;gap:42px;justify-content:center;flex-wrap:wrap;white-space:normal;padding:0 20px}
+
+/* sections */
+section{padding:76px 0}
+.title{text-align:center;margin-bottom:44px}
+.title h2{font-size:clamp(2rem,6vw,3.2rem);color:var(--saffron)}
+.title p{color:var(--muted);margin:8px auto 0;max-width:34em}
+.orn{display:block;margin:14px auto 0;width:150px;height:14px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.card{background:linear-gradient(160deg,var(--coal2),#1D110C);border:1px solid var(--line);border-radius:22px;padding:28px 20px;text-align:center;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--fire)}
+.card .ic{font-size:3rem;line-height:1;display:block;margin-bottom:10px}
+.card h3{font-size:1.4rem;margin-bottom:6px;color:var(--cream)}
+.card p{margin:0;color:var(--muted);font-size:.98rem}
+
+.feast{background:linear-gradient(180deg,var(--coal),#2B1409 50%,var(--coal))}
+.feast .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.tile{border:2px dashed var(--fire);border-radius:22px;padding:26px 22px;background:rgba(229,82,27,.07)}
+.tile h3{color:var(--saffron);font-size:1.5rem;margin-bottom:6px}
+.tile p{margin:0;color:var(--cream)}
+
+.access ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.access li{display:flex;gap:12px;align-items:center;background:var(--coal2);border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+.access li b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--saffron);color:var(--coal);display:grid;place-items:center;font-size:1.1rem}
+
+.visit{background:var(--saffron);color:var(--coal);text-align:center;border-radius:28px;padding:44px 24px}
+.visit h2{font-size:clamp(1.9rem,5.5vw,3rem);margin-bottom:10px}
+.visit p{margin:0 auto 6px;max-width:32em;font-weight:500}
+.pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.pills span{background:var(--coal);color:var(--cream);border-radius:999px;padding:8px 24px;font-weight:700}
+
+footer{padding:34px 0 40px;text-align:center;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+footer b{font-family:"Reem Kufi",Tahoma,sans-serif;color:var(--saffron);font-size:1.3rem;display:block}
+
+.lang{font:inherit;font-weight:700;margin-inline-start:18px;background:transparent;color:var(--saffron);border:2px solid var(--saffron);border-radius:999px;padding:2px 16px;cursor:pointer}
+.lang:hover{background:var(--saffron);color:var(--coal)}
+.menu{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.mg{background:linear-gradient(160deg,var(--coal2),#1D110C);border:1px solid var(--line);border-radius:22px;padding:28px 26px}
+.mg h3{font-size:1.6rem;color:var(--saffron);margin-bottom:14px;padding-bottom:10px;border-bottom:2px dashed var(--fire)}
+.mg ul{list-style:none;margin:0;padding:0}
+.mg li{padding:9px 0;border-bottom:1px solid rgba(74,46,32,.7)}
+.mg li:last-child{border-bottom:0}
+.mg b{display:block;font-size:1.15rem;color:var(--cream)}
+.mg span{display:block;color:var(--muted);font-size:.95rem;line-height:1.6}
+html[lang="en"] body{font-family:"Poppins","Segoe UI",sans-serif;line-height:1.7;font-size:17px}
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3,html[lang="en"] .brand,html[lang="en"] .ribbon,html[lang="en"] .tag,html[lang="en"] footer b{font-family:"Playfair Display",Georgia,serif}
+html[lang="en"] .hero h1{font-size:clamp(2.9rem,8.5vw,5.6rem);line-height:1.1}
+a.card{display:block;text-decoration:none;color:inherit}
+.mg li{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.mg li>div:first-child{flex:1}
+.qty{display:flex;align-items:center;gap:8px;flex:none}
+.qty button{width:38px;height:38px;border-radius:50%;border:2px solid var(--saffron);background:transparent;color:var(--saffron);font-size:1.3rem;line-height:1;cursor:pointer;font-weight:700}
+.qty button:hover{background:var(--saffron);color:var(--coal)}
+.qty em{font-style:normal;min-width:1.4em;text-align:center;font-weight:800}
+.form{max-width:760px;margin:0 auto;background:linear-gradient(160deg,var(--coal2),#1D110C);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.form label{display:grid;gap:6px;font-weight:500}
+.form input{font:inherit;color:var(--cream);background:#120A07;border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-height:46px;width:100%;color-scheme:dark}
+.form input:focus{border-color:var(--saffron)}
+.form .btn{grid-column:1/-1;cursor:pointer;font:inherit;font-weight:800;color:#fff}
+.form .note{grid-column:1/-1;margin:0;color:var(--saffron);min-height:1.6em;text-align:center}
+.cartbar{position:fixed;inset-inline:0;bottom:0;z-index:20;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;background:#2B1409;border-top:2px solid var(--fire);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.cartbar[hidden]{display:none}
+.cartbar select{font:inherit;background:#120A07;color:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 14px}
+.cartbar .btn{padding:9px 22px;cursor:pointer;font:inherit;font-weight:800}
+.clr{background:transparent;color:var(--muted);border:0;cursor:pointer;font:inherit;text-decoration:underline}
+.fab{position:fixed;inset-inline-end:16px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:15;display:grid;gap:10px}
+.fab a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;text-decoration:none;font-size:1.5rem;background:var(--fire);box-shadow:0 8px 22px rgba(0,0,0,.5)}
+.fab a.wa{background:#25D366}
+body.hascart{padding-bottom:120px}
+body.hascart .fab{bottom:calc(130px + env(safe-area-inset-bottom,0px))}
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;text-align:center;padding-bottom:130px}
+  .hero p{margin-inline:auto}.btns{justify-content:center}
+  .plate{max-width:320px;order:-1}
+  .top{flex-wrap:wrap}.top nav{width:100%;display:flex;align-items:center;overflow-x:auto;white-space:nowrap;padding-bottom:6px}
+  .menu{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"حاتي الحلوني","telephone":"+201010958189","acceptsReservations":true,"paymentAccepted":"Cash"}</script>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap" style="display:block;padding-bottom:0;padding-top:0">
+    <div class="top">
+      <div class="brand">حاتي الحلوني</div>
+      <nav aria-label="التنقل"><a href="#meals">الوجبات</a><a href="#menu">المنيو</a><a href="#services">الخدمات</a><a href="#contact">تواصل</a><a href="#reserve">احجز</a><button class="lang" id="lang" type="button">English</button></nav>
+    </div>
+  </div>
+  <div class="wrap">
+    <div>
+      <h1>حاتي<br>الحلوني</h1>
+      <div class="tag">سفرة عامرة وقعدة دافية</div>
+      <p>أكل حلال على أصوله، من الفطار لحد آخر الليل. تعالى لوحدك أو مع العيلة أو الشلة، والكل هيلاقي مكانه.</p>
+      <div class="btns">
+        <a class="btn main" href="#reserve">احجز طاولتك</a>
+        <a class="btn" href="#menu">اطلب دلوقتي</a>
+      </div>
+    </div>
+
+    <svg class="plate" viewBox="0 0 400 400" role="img" aria-label="صينية أكل مشوي">
+      <defs>
+        <radialGradient id="tray" cx="50%" cy="40%" r="65%"><stop offset="0" stop-color="#F9D06B"/><stop offset="1" stop-color="#A9690F"/></radialGradient>
+        <linearGradient id="meat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9A4A22"/><stop offset="1" stop-color="#5A2410"/></linearGradient>
+      </defs>
+      <g class="steam" fill="none" stroke="#FBEFD9" stroke-width="7" stroke-linecap="round">
+        <path d="M150 70c-20-22 20-34 0-58"/><path d="M200 66c-20-22 20-34 0-58"/><path d="M250 70c-20-22 20-34 0-58"/>
+      </g>
+      <circle cx="200" cy="230" r="165" fill="url(#tray)"/>
+      <circle cx="200" cy="230" r="150" fill="none" stroke="#7A4709" stroke-width="3"/>
+      <circle cx="200" cy="230" r="128" fill="#2B1409"/>
+      <circle cx="200" cy="230" r="128" fill="none" stroke="#F4B63D" stroke-width="2" stroke-dasharray="3 8"/>
+      <g transform="rotate(-18 200 230)">
+        <rect x="70" y="196" width="260" height="6" rx="3" fill="#D9D2C3"/>
+        <g fill="url(#meat)"><rect x="96" y="178" width="42" height="42" rx="12"/><rect x="146" y="178" width="42" height="42" rx="12"/><rect x="196" y="178" width="42" height="42" rx="12"/><rect x="246" y="178" width="42" height="42" rx="12"/></g>
+        <rect x="70" y="246" width="260" height="6" rx="3" fill="#D9D2C3"/>
+        <g fill="url(#meat)"><rect x="96" y="228" width="42" height="42" rx="12"/><rect x="146" y="228" width="42" height="42" rx="12"/><rect x="196" y="228" width="42" height="42" rx="12"/><rect x="246" y="228" width="42" height="42" rx="12"/></g>
+      </g>
+      <g fill="#E5521B"><circle cx="128" cy="318" r="17"/><circle cx="276" cy="150" r="17"/></g>
+      <g fill="#7FA94B"><ellipse cx="300" cy="296" rx="20" ry="9" transform="rotate(30 300 296)"/><ellipse cx="104" cy="170" rx="20" ry="9" transform="rotate(-30 104 170)"/></g>
+      <g fill="#FBEFD9" opacity=".9"><circle cx="160" cy="326" r="9"/><circle cx="244" cy="322" r="9"/><circle cx="238" cy="140" r="9"/></g>
+    </svg>
+  </div>
+
+  <svg class="flames" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true">
+    <g fill="#E5521B" opacity=".9"><path d="M0 150C30 90 10 60 50 20 70 70 110 90 100 150Z"/><path d="M180 150C200 100 190 70 230 30 250 80 290 100 280 150Z"/><path d="M360 150C390 100 370 70 410 25 430 80 470 100 460 150Z"/><path d="M540 150C560 100 550 70 590 30 610 80 650 100 640 150Z"/><path d="M720 150C750 100 730 70 770 25 790 80 830 100 820 150Z"/><path d="M900 150C920 100 910 70 950 30 970 80 1010 100 1000 150Z"/><path d="M1080 150C1110 100 1090 70 1130 25 1150 80 1190 100 1180 150Z"/></g>
+    <g fill="#F58A1F"><path d="M90 150C110 110 100 90 135 60 150 100 180 115 175 150Z"/><path d="M270 150C290 110 280 90 315 60 330 100 360 115 355 150Z"/><path d="M450 150C470 110 460 90 495 60 510 100 540 115 535 150Z"/><path d="M630 150C650 110 640 90 675 60 690 100 720 115 715 150Z"/><path d="M810 150C830 110 820 90 855 60 870 100 900 115 895 150Z"/><path d="M990 150C1010 110 1000 90 1035 60 1050 100 1080 115 1075 150Z"/></g>
+    <g fill="#F4B63D"><path d="M30 150C45 125 40 115 60 100 70 125 85 130 82 150Z"/><path d="M210 150C225 125 220 115 240 100 250 125 265 130 262 150Z"/><path d="M390 150C405 125 400 115 420 100 430 125 445 130 442 150Z"/><path d="M570 150C585 125 580 115 600 100 610 125 625 130 622 150Z"/><path d="M750 150C765 125 760 115 780 100 790 125 805 130 802 150Z"/><path d="M930 150C945 125 940 115 960 100 970 125 985 130 982 150Z"/><path d="M1110 150C1125 125 1120 115 1140 100 1150 125 1165 130 1162 150Z"/></g>
+  </svg>
+</header>
+
+<div class="ribbon"><div><span>أكل حلال</span><span>كل اللي تقدر تاكله</span><span>أطباق صغيرة</span><span>أكل لحد آخر الليل</span><span>قائمة للأطفال</span></div></div>
+
+<main>
+<section id="meals">
+  <div class="wrap">
+    <div class="title">
+      <h2>على سفرتنا</h2>
+      <svg class="orn" viewBox="0 0 150 14" aria-hidden="true"><path d="M0 7h60M90 7h60" stroke="#F4B63D" stroke-width="2"/><path d="M75 0l7 7-7 7-7-7z" fill="#E5521B"/></svg>
+      <p>في أي وقت من اليوم هتلاقي عندنا اللي يناسبك.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="ic">🍳</span><h3>فطار</h3><p>ابدأ يومك بحاجة تشبع.</p></div>
+      <div class="card"><span class="ic">🥞</span><h3>برانش</h3><p>وجبة الصبح المتأخرة مع الشلة.</p></div>
+      <div class="card"><span class="ic">🍖</span><h3>غدا</h3><p>سفرة الغدا الحلال المشبعة.</p></div>
+      <div class="card"><span class="ic">🌙</span><h3>عشا</h3><p>وأكل لحد آخر الليل.</p></div>
+      <div class="card"><span class="ic">🍰</span><h3>حلويات</h3><p>ختامها حاجة حلوة.</p></div>
+      <div class="card"><span class="ic">☕</span><h3>قهوة وكوكتيلات</h3><p>ومشروبات في الهابي آور.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="title"><h2>المنيو</h2><svg class="orn" viewBox="0 0 150 14" aria-hidden="true"><path d="M0 7h60M90 7h60" stroke="#F4B63D" stroke-width="2"/><path d="M75 0l7 7-7 7-7-7z" fill="#E5521B"/></svg></div>
+    <div class="menu">
+      <div class="mg"><h3>المشويات</h3><ul>
+        <li><div><b>ريش ضاني مشوية</b><span>على الفحم مع بصل مشوي وطماطم</span></div><div class="qty" data-n="ريش ضاني مشوية"></div></li>
+        <li><div><b>كباب مشوي</b><span>قطع لحم متبلة على الأسياخ</span></div><div class="qty" data-n="كباب مشوي"></div></li>
+        <li><div><b>كفتة مشوية</b><span>كفتة بالبقدونس والبصل</span></div><div class="qty" data-n="كفتة مشوية"></div></li>
+        <li><div><b>كبدة مشوية</b><span>بالكمون والفلفل الحار</span></div><div class="qty" data-n="كبدة مشوية"></div></li>
+      </ul></div>
+      <div class="mg"><h3>الحلة والفرن</h3><ul>
+        <li><div><b>فتة حاتي</b><span>رز وعيش محمّص وصلصة الثوم والخل</span></div><div class="qty" data-n="فتة حاتي"></div></li>
+        <li><div><b>طاجن ضاني بالبصل</b><span>لحم ضاني مستوي على نار هادية في طاجن فخار</span></div><div class="qty" data-n="طاجن ضاني بالبصل"></div></li>
+        <li><div><b>أرز بالشعرية</b><span>رز مصري بالسمنة</span></div><div class="qty" data-n="أرز بالشعرية"></div></li>
+      </ul></div>
+      <div class="mg"><h3>مقبلات وأطباق صغيرة</h3><ul>
+        <li><div><b>حمص</b><span>بزيت الزيتون</span></div><div class="qty" data-n="حمص"></div></li>
+        <li><div><b>بابا غنوج</b><span>باذنجان مشوي بطعم مدخن</span></div><div class="qty" data-n="بابا غنوج"></div></li>
+        <li><div><b>سلطة بلدي</b><span>طماطم وخيار وخس</span></div><div class="qty" data-n="سلطة بلدي"></div></li>
+        <li><div><b>طحينة</b><span>بالليمون والثوم</span></div><div class="qty" data-n="طحينة"></div></li>
+      </ul></div>
+      <div class="mg"><h3>حلويات ومشروبات</h3><ul>
+        <li><div><b>أم علي</b><span>بالمكسرات والقشطة</span></div><div class="qty" data-n="أم علي"></div></li>
+        <li><div><b>كنافة</b><span>بالقشطة والقطر</span></div><div class="qty" data-n="كنافة"></div></li>
+        <li><div><b>قهوة تركي</b><span>مظبوطة على ذوقك</span></div><div class="qty" data-n="قهوة تركي"></div></li>
+        <li><div><b>ليمون بالنعناع</b><span>منعش وبارد</span></div><div class="qty" data-n="ليمون بالنعناع"></div></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="feast">
+  <div class="wrap">
+    <div class="title"><h2>اتفضل يا ضيفنا</h2><svg class="orn" viewBox="0 0 150 14" aria-hidden="true"><path d="M0 7h60M90 7h60" stroke="#F4B63D" stroke-width="2"/><path d="M75 0l7 7-7 7-7-7z" fill="#E5521B"/></svg></div>
+    <div class="cols">
+      <div class="tile"><h3>كل اللي تقدر تاكله</h3><p>سفرة مفتوحة للي بيحب ياكل براحته.</p></div>
+      <div class="tile"><h3>أطباق صغيرة</h3><p>جرّب أكتر من صنف في القعدة.</p></div>
+      <div class="tile"><h3>الهابي آور</h3><p>مشروبات وأكل بعروض في وقت محدد.</p></div>
+      <div class="tile"><h3>للعيلة والشلة</h3><p>قعدة كاجوال ودافية، وقائمة مخصوصة للأطفال.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="title"><h2>اطلب زي ما تحب</h2><svg class="orn" viewBox="0 0 150 14" aria-hidden="true"><path d="M0 7h60M90 7h60" stroke="#F4B63D" stroke-width="2"/><path d="M75 0l7 7-7 7-7-7z" fill="#E5521B"/></svg></div>
+    <div class="cards">
+      <div class="card"><span class="ic">🍽️</span><h3>في المطعم</h3><p>خدمة على الكاونتر وأماكن جلوس مريحة.</p></div>
+      <div class="card"><span class="ic">🛍️</span><h3>تيك أواي</h3><p>اطلب واستلم أكلك ساخن.</p></div>
+      <div class="card"><span class="ic">🛵</span><h3>توصيل</h3><p>السفرة توصلك لحد باب البيت.</p></div>
+      <div class="card"><span class="ic">🎉</span><h3>كاترينج</h3><p>للمناسبات والتجمعات الكبيرة.</p></div>
+    </div>
+    <div class="btns" style="justify-content:center;margin-top:32px"><a class="btn main" href="#menu">اطلب من المنيو</a><a class="btn" href="tel:+201010958189">اتصل واطلب</a></div>
+  </div>
+</section>
+
+<section class="access">
+  <div class="wrap">
+    <div class="title"><h2>مكان يرحب بالجميع</h2><svg class="orn" viewBox="0 0 150 14" aria-hidden="true"><path d="M0 7h60M90 7h60" stroke="#F4B63D" stroke-width="2"/><path d="M75 0l7 7-7 7-7-7z" fill="#E5521B"/></svg></div>
+    <ul>
+      <li><b>♿</b>مدخل مناسب للكراسي المتحركة</li>
+      <li><b>♿</b>جلسات مناسبة للكراسي المتحركة</li>
+      <li><b>♿</b>موقف سيارات مناسب للكراسي المتحركة</li>
+      <li><b>♿</b>دورة مياه مناسبة للكراسي المتحركة</li>
+      <li><b>👂</b>نظام حلقة سمع مساعدة</li>
+      <li><b>🚻</b>دورة مياه متاحة</li>
+    </ul>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:20px">
+  <div class="wrap">
+    <div class="visit">
+      <h2>احجز طاولتك قبل ما تيجي</h2>
+      <p>الحجز مطلوب عندنا، وبنقبل الحجز مسبقًا. عشان نضمن لك مكانك على السفرة.</p>
+      <div class="pills"><span>الدفع كاش فقط</span><span>الحجز مطلوب</span></div>
+    </div>
+  </div>
+</section>
+<section id="reserve" style="padding-top:20px">
+  <div class="wrap">
+    <div class="title"><h2>احجز طاولتك</h2><svg class="orn" viewBox="0 0 150 14" aria-hidden="true"><path d="M0 7h60M90 7h60" stroke="#F4B63D" stroke-width="2"/><path d="M75 0l7 7-7 7-7-7z" fill="#E5521B"/></svg><p>املا البيانات وهنأكد معاك على واتساب.</p></div>
+    <form class="form" id="rform">
+      <label>الاسم<input name="n" required autocomplete="name"></label>
+      <label>رقم الموبايل<input name="p" type="tel" required inputmode="tel" pattern="[0-9+ ]{10,15}" dir="ltr" placeholder="01xxxxxxxxx" autocomplete="tel"></label>
+      <label>التاريخ<input name="d" type="date" required id="rdate"></label>
+      <label>الوقت<input name="t" type="time" required></label>
+      <label>عدد الأفراد<input name="g" type="number" min="1" max="50" value="2" required></label>
+      <label>ملاحظات (اختياري)<input name="x"></label>
+      <button class="btn main" type="submit"><span>ابعت الحجز على واتساب</span></button>
+      <p class="note" id="rnote" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="title"><h2>تواصل معنا</h2><svg class="orn" viewBox="0 0 150 14" aria-hidden="true"><path d="M0 7h60M90 7h60" stroke="#F4B63D" stroke-width="2"/><path d="M75 0l7 7-7 7-7-7z" fill="#E5521B"/></svg></div>
+    <div class="cards">
+      <a class="card" href="tel:+201010958189"><span class="ic">📞</span><h3>اتصل بينا</h3><p dir="ltr">01010958189</p></a>
+      <a class="card" href="https://wa.me/201010958189" target="_blank" rel="noopener"><span class="ic">💬</span><h3>واتساب</h3><p>ابعتلنا رسالة أو اطلب أكلك</p></a>
+      <a class="card" href="https://www.google.com/maps/search/?api=1&amp;query=%D8%AD%D8%A7%D8%AA%D9%8A+%D8%A7%D9%84%D8%AD%D9%84%D9%88%D9%86%D9%8A" target="_blank" rel="noopener"><span class="ic">📍</span><h3>الموقع</h3><p>افتح المطعم على خرائط جوجل</p></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><b>حاتي الحلوني</b>للعنوان وأرقام التواصل وساعات العمل، راجع صفحة المطعم على خرائط جوجل.<br><a href="tel:+201010958189" dir="ltr" style="color:var(--saffron);font-weight:700">01010958189</a></div></footer>
+<div class="fab"><a class="wa" href="https://wa.me/201010958189" target="_blank" rel="noopener" aria-label="واتساب">💬</a><a href="tel:+201010958189" aria-label="اتصل بالمطعم">📞</a></div>
+<div class="cartbar" id="cart" hidden><span id="ccount"></span><select id="otype" aria-label="نوع الطلب"><option value="توصيل">توصيل</option><option value="تيك أواي">تيك أواي</option><option value="في المطعم">في المطعم</option></select><button class="btn main" id="csend" type="button"></button><button class="clr" id="cclear" type="button"></button></div>
+<script>
+(function(){
+var D={"تواصل": "Contact", "واتساب": "WhatsApp", "اتصل بالمطعم": "Call the restaurant", "نوع الطلب": "Order type", "اطلب من المنيو": "Order from the menu", "اتصل واطلب": "Call to order", "املا البيانات وهنأكد معاك على واتساب.": "Fill in the details and we will confirm with you on WhatsApp.", "الاسم": "Name", "رقم الموبايل": "Mobile number", "التاريخ": "Date", "الوقت": "Time", "عدد الأفراد": "Number of guests", "ملاحظات (اختياري)": "Notes (optional)", "ابعت الحجز على واتساب": "Send booking on WhatsApp", "تواصل معنا": "Contact us", "اتصل بينا": "Call us", "ابعتلنا رسالة أو اطلب أكلك": "Send us a message or order your food", "الموقع": "Location", "افتح المطعم على خرائط جوجل": "Open the restaurant on Google Maps","حاتي الحلوني": "Hati El-Helwany", "حاتي": "Hati", "الحلوني": "El-Helwany", "الوجبات": "Meals", "المنيو": "Menu", "الخدمات": "Services", "احجز": "Book", "سفرة عامرة وقعدة دافية": "A generous table and a warm seat", "أكل حلال على أصوله، من الفطار لحد آخر الليل. تعالى لوحدك أو مع العيلة أو الشلة، والكل هيلاقي مكانه.": "Authentic halal food, from breakfast until late at night. Come alone, with family, or with friends. There is a place for everyone.", "احجز طاولتك": "Book your table", "اطلب دلوقتي": "Order now", "صينية أكل مشوي": "Tray of grilled meat", "التنقل": "Navigation", "أكل حلال": "Halal food", "كل اللي تقدر تاكله": "All you can eat", "أطباق صغيرة": "Small plates", "أكل لحد آخر الليل": "Late-night food", "قائمة للأطفال": "Kids' menu", "على سفرتنا": "At our table", "في أي وقت من اليوم هتلاقي عندنا اللي يناسبك.": "Whatever the time of day, you will find something that suits you.", "فطار": "Breakfast", "ابدأ يومك بحاجة تشبع.": "Start your day with something filling.", "برانش": "Brunch", "وجبة الصبح المتأخرة مع الشلة.": "A late-morning meal with friends.", "غدا": "Lunch", "سفرة الغدا الحلال المشبعة.": "A hearty halal lunch spread.", "عشا": "Dinner", "وأكل لحد آخر الليل.": "And food until late at night.", "حلويات": "Dessert", "ختامها حاجة حلوة.": "End on a sweet note.", "قهوة وكوكتيلات": "Coffee & cocktails", "ومشروبات في الهابي آور.": "Plus happy-hour drinks.", "اتفضل يا ضيفنا": "Welcome, dear guest", "سفرة مفتوحة للي بيحب ياكل براحته.": "An open table for those who like to eat at their own pace.", "جرّب أكتر من صنف في القعدة.": "Try more than one dish in a sitting.", "الهابي آور": "Happy hour", "مشروبات وأكل بعروض في وقت محدد.": "Drinks and food at special times.", "للعيلة والشلة": "For families & groups", "قعدة كاجوال ودافية، وقائمة مخصوصة للأطفال.": "A casual, cosy setting, with a menu made for kids.", "اطلب زي ما تحب": "Order the way you like", "في المطعم": "Dine-in", "خدمة على الكاونتر وأماكن جلوس مريحة.": "Counter service and comfortable seating.", "تيك أواي": "Takeaway", "اطلب واستلم أكلك ساخن.": "Order and pick up your food hot.", "توصيل": "Delivery", "السفرة توصلك لحد باب البيت.": "The feast comes to your door.", "كاترينج": "Catering", "للمناسبات والتجمعات الكبيرة.": "For events and large gatherings.", "مكان يرحب بالجميع": "A place that welcomes everyone", "مدخل مناسب للكراسي المتحركة": "Wheelchair-accessible entrance", "جلسات مناسبة للكراسي المتحركة": "Wheelchair-accessible seating", "موقف سيارات مناسب للكراسي المتحركة": "Wheelchair-accessible car park", "دورة مياه مناسبة للكراسي المتحركة": "Wheelchair-accessible toilet", "نظام حلقة سمع مساعدة": "Assistive hearing loop", "دورة مياه متاحة": "Toilet available", "احجز طاولتك قبل ما تيجي": "Book your table before you come", "الحجز مطلوب عندنا، وبنقبل الحجز مسبقًا. عشان نضمن لك مكانك على السفرة.": "Reservations are required, and we accept bookings in advance, so your seat at the table is guaranteed.", "الدفع كاش فقط": "Cash only", "الحجز مطلوب": "Reservations required", "للعنوان وأرقام التواصل وساعات العمل، راجع صفحة المطعم على خرائط جوجل.": "For the address, phone numbers and opening hours, see the restaurant's page on Google Maps.", "المشويات": "From the grill", "الحلة والفرن": "Pots & oven", "مقبلات وأطباق صغيرة": "Starters & small plates", "حلويات ومشروبات": "Desserts & drinks", "ريش ضاني مشوية": "Grilled lamb chops", "على الفحم مع بصل مشوي وطماطم": "Charcoal-grilled with roasted onion and tomato", "كباب مشوي": "Grilled kebab", "قطع لحم متبلة على الأسياخ": "Seasoned meat cubes on skewers", "كفتة مشوية": "Grilled kofta", "كفتة بالبقدونس والبصل": "Kofta with parsley and onion", "كبدة مشوية": "Grilled liver", "بالكمون والفلفل الحار": "With cumin and chili", "فتة حاتي": "Hati fatta", "رز وعيش محمّص وصلصة الثوم والخل": "Rice and toasted bread with garlic-vinegar sauce", "طاجن ضاني بالبصل": "Lamb tagine with onions", "لحم ضاني مستوي على نار هادية في طاجن فخار": "Lamb slow-cooked in a clay pot", "أرز بالشعرية": "Vermicelli rice", "رز مصري بالسمنة": "Egyptian rice with ghee", "حمص": "Hummus", "بزيت الزيتون": "With olive oil", "بابا غنوج": "Baba ghanoush", "باذنجان مشوي بطعم مدخن": "Smoky roasted eggplant", "سلطة بلدي": "Baladi salad", "طماطم وخيار وخس": "Tomato, cucumber and lettuce", "طحينة": "Tahini", "بالليمون والثوم": "With lemon and garlic", "أم علي": "Om Ali", "بالمكسرات والقشطة": "With nuts and cream", "كنافة": "Kunafa", "بالقشطة والقطر": "With cream and syrup", "قهوة تركي": "Turkish coffee", "مظبوطة على ذوقك": "Made to your taste", "ليمون بالنعناع": "Lemon with mint", "منعش وبارد": "Cold and refreshing"};
+var nodes=[],w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var p=n.parentNode.nodeName;return(/^(SCRIPT|STYLE|BUTTON)$/.test(p)||!n.nodeValue.trim())?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}}),n;
+while((n=w.nextNode()))nodes.push([n,n.nodeValue]);
+var labels=[].slice.call(document.querySelectorAll("[aria-label]")).map(function(e){return[e,e.getAttribute("aria-label")]});
+var btn=document.getElementById("lang");
+function set(l){
+  var en=l==="en",h=document.documentElement;
+  h.lang=l;h.dir=en?"ltr":"rtl";
+  nodes.forEach(function(x){var t=x[1].trim();x[0].nodeValue=(en&&D[t])?x[1].replace(t,function(){return D[t]}):x[1]});
+  labels.forEach(function(x){var t=x[1].trim();x[0].setAttribute("aria-label",(en&&D[t])?D[t]:x[1])});
+  document.title=en?"Hati El-Helwany":"\u062d\u0627\u062a\u064a \u0627\u0644\u062d\u0644\u0648\u0646\u064a";
+  btn.textContent=en?"\u0627\u0644\u0639\u0631\u0628\u064a\u0629":"English";
+  try{localStorage.setItem("lang",l)}catch(e){}
+}
+btn.addEventListener("click",function(){set(document.documentElement.lang==="en"?"ar":"en")});
+try{if(localStorage.getItem("lang")==="en")set("en")}catch(e){}
+})();
+</script>
+<script>
+(function(){
+var PHONE="201010958189",cart={};
+function en(){return document.documentElement.lang==="en"}
+function tx(a,e){return en()?e:a}
+function openUrl(u){var a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove()}
+function wa(m){openUrl("https://wa.me/"+PHONE+"?text="+encodeURIComponent(m))}
+var qs=[].slice.call(document.querySelectorAll(".qty")),bar=document.getElementById("cart");
+function render(){
+  var total=0,k;
+  for(k in cart)total+=cart[k];
+  qs.forEach(function(q){
+    var n=q.getAttribute("data-n"),c=cart[n]||0;
+    q.innerHTML=c?'<button type="button" data-a="-" aria-label="'+tx("إزالة","Remove")+'">\u2212</button><em>'+c+'</em><button type="button" data-a="+" aria-label="'+tx("إضافة","Add")+'">+</button>':'<button type="button" data-a="+" aria-label="'+tx("إضافة للطلب","Add to order")+'">+</button>';
+  });
+  bar.hidden=!total;document.body.classList.toggle("hascart",!!total);
+  document.getElementById("ccount").textContent=tx("طلبك: "+total+" صنف","Your order: "+total+" items");
+  document.getElementById("csend").textContent=tx("ابعت الطلب على واتساب","Send order on WhatsApp");
+  document.getElementById("cclear").textContent=tx("مسح","Clear");
+}
+document.addEventListener("click",function(e){
+  var b=e.target.closest(".qty button");if(!b)return;
+  var n=b.parentNode.getAttribute("data-n");
+  cart[n]=Math.max(0,(cart[n]||0)+(b.getAttribute("data-a")==="+"?1:-1));
+  if(!cart[n])delete cart[n];
+  render();
+});
+document.getElementById("cclear").addEventListener("click",function(){cart={};render()});
+document.getElementById("csend").addEventListener("click",function(){
+  var m="طلب جديد من موقع حاتي الحلوني\nنوع الطلب: "+document.getElementById("otype").value+"\n",k;
+  for(k in cart)m+="• "+k+" × "+cart[k]+"\n";
+  m+="\nالاسم والعنوان:";
+  wa(m);
+});
+var f=document.getElementById("rform"),d=document.getElementById("rdate"),t=new Date();
+d.min=t.getFullYear()+"-"+String(t.getMonth()+1).padStart(2,"0")+"-"+String(t.getDate()).padStart(2,"0");
+f.addEventListener("submit",function(e){
+  e.preventDefault();
+  var v=function(n){return f.elements[n].value.trim()};
+  var m="حجز جديد من موقع حاتي الحلوني\nالاسم: "+v("n")+"\nالموبايل: "+v("p")+"\nالتاريخ: "+v("d")+"\nالوقت: "+v("t")+"\nعدد الأفراد: "+v("g");
+  if(v("x"))m+="\nملاحظات: "+v("x");
+  wa(m);
+  document.getElementById("rnote").textContent=tx("لو واتساب ماتفتحش، اتصل بينا على "+PHONE,"If WhatsApp did not open, call us on "+PHONE);
+});
+new MutationObserver(function(){render();document.getElementById("rnote").textContent=""}).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
+render();
+})();
+</script>
+</body>
+</html>
